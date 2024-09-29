@@ -24,13 +24,14 @@ elif modo == 2:
         print(f"O computador retirou {jogada_computador} fósforo(s).")
         fosforos = fosforos - jogada_computador
         if fosforos == 1:
+            jogada_utilizador = int(input(f"Há {fosforos} fósforos. Quantos deseja retirar? (1-4)"))
             print("Você perdeu!!")
         jogada_utilizador = int(input(f"Há {fosforos} fósforos. Quantos deseja retirar? (1-4)"))
         while jogada_utilizador < 1 or jogada_utilizador > 4 or jogada_utilizador > fosforos:
             jogada_utilizador = int(input(f"Jogada inválida! Há {fosforos} fósforos. Quantos deseja retirar? (1-4)"))
         fosforos = fosforos - jogada_utilizador
         if fosforos == 1:
-            print("O computador retirou 1 fósforo.")
+            print("Sobrou 1 fósforo.")
             print("O computador perdeu!")
 else:
     print("Modo inválido.")
