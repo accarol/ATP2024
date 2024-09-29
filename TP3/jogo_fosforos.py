@@ -8,7 +8,7 @@ if modo == 1:
             jogada_utilizador = int(input(f"Jogada inválida! Há {fosforos} fósforos. Quantos deseja retirar? (1-4)"))
         fosforos = fosforos - jogada_utilizador
         if fosforos == 1:
-            print("O computador retirou 1 fósforo.")
+            print("Sobrou 1 fósforo.")
             print("O computador perdeu!")
         jogada_computador = (fosforos - 1) % 5
         if jogada_computador < 1 or jogada_computador > 4:
