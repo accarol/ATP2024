@@ -23,7 +23,9 @@ if modo == 1:
             print("Você perdeu!!")
 elif modo == 2:
     while fosforos > 1:
-        jogada_computador = random.randint(1,4)
+        jogada_computador = (fosforos - 1) % 5
+        if jogada_computador < 1 or jogada_computador > 4:
+            jogada_computador = random.randint(1,4)
         print(f"O computador retirou {jogada_computador} fósforo(s).")
         fosforos = fosforos - jogada_computador
         if fosforos == 1:
