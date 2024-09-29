@@ -1,4 +1,7 @@
 modo = int(input("Bem vindo(a)! Quem começa a jogar: 1. Utilizador ou 2. Computador?"))
+while modo != 1 and modo != 2:
+        print("Modo inválido.")
+        modo = int(input("Bem vindo(a)! Quem começa a jogar: 1. Utilizador ou 2. Computador?"))
 fosforos = 21
 import random
 if modo == 1:
@@ -33,6 +36,3 @@ elif modo == 2:
         if fosforos == 1:
             print("Sobrou 1 fósforo.")
             print("O computador perdeu!")
-else:
-    print("Modo inválido.")
-    modo = int(input("Bem vindo(a)! Quem começa a jogar: 1. Utilizador ou 2. Computador?"))
