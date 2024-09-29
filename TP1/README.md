@@ -3,5 +3,5 @@
 ## Autor: Ana Carolina Rodrigues Guimarães
 ## Resumo:
 A TP1 consistiu na realização de 2 exercícios:
-- Resolver o exercício 10 no jogo "maze".
-- No jogo "turtle", desenhar uma casa, um sol e uma árvore.
+* Resolver o exercício 10 no jogo "maze".
+* No jogo "turtle", desenhar uma casa, um sol e uma árvore.
