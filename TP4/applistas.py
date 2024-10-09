@@ -70,7 +70,7 @@ def procurarElemento(lista):
     while i < len(lista):
         if n == lista[i]:
             res = i
-        i = i + 1 #fora do else, pois temos de verificar todos os elementos da lista e não parar num específico
+        i = i + 1
     return res
 
 def menu():
