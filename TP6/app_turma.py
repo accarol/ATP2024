@@ -59,22 +59,6 @@ def guardar_turma(turma, fnome):
     file.close()
     print(f"Turma guardada no ficheiro {fnome}")
 
-def carregar_turma(fnome): #corrigir função!!!!
-    turma = []
-    f = open(fnome)
-    for linha in f:
-        campos = linha.split("::")
-        nome = campos[0] 
-        id = campos[1]
-        notas = campos[2]
-        notaTPC = float(notas[0])
-        notaProj = float(notas[1])
-        notaTeste = float(notas[2])
-        aluno = (nome, id, notaTPC, notaProj, notaTeste)
-        turma.append(aluno)
-    f.close()
-    return turma
-
 def carregar_turma(fnome): #corrigir e substituir por antigo
     turma = []
     f = open(fnome)
