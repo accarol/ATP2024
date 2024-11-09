@@ -84,7 +84,7 @@ def carregar_turma(fnome): #corrigir e substituir por antigo
             campos = linha.split("::")
             nome = campos[0][1] 
             id = campos[0][2]
-            notas = (float(campos[1][0]), float(campos[1][1], float(campos[1][2])))
+            notas = (float(campos[1][0]), float(campos[1][1]), float(campos[1][2]))
             aluno = (nome, id, notas)
             turma.append(aluno)
     f.close()
