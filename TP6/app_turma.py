@@ -47,8 +47,7 @@ def consultar_aluno(turma):
         print("Aluno não encontrado.")
 
 def linha(aluno):
-    res = str(aluno[0]) + ',' + str(aluno[1])
-    res = res + '::' + str(aluno[2][0]) + ',' + str(aluno[2][1]) + ',' + str(aluno[2][2])
+    res = str(aluno[0]) + '::' + str(aluno[1]) + '::' + str(aluno[2][0]) + '::' + str(aluno[2][1]) + '::' + str(aluno[2][2])
     res = res + "\n"
     return res
 
@@ -59,18 +58,16 @@ def guardar_turma(turma, fnome):
     file.close()
     print(f"Turma guardada no ficheiro {fnome}")
 
-def carregar_turma(fnome): #corrigir e substituir por antigo
+def carregar_turma(fnome):
     turma = []
     f = open(fnome)
     for linha in f:
-        linha = linha.strip()
-        if linha != "":
-            campos = linha.split("::")
-            nome = campos[0][1] 
-            id = campos[0][2]
-            notas = (float(campos[1][0]), float(campos[1][1]), float(campos[1][2]))
-            aluno = (nome, id, notas)
-            turma.append(aluno)
+        campos = linha.split("::")
+        nome = campos[0] 
+        id = campos[1]
+        notas = (float(campos[2]), float(campos[3]), float(campos[4]))
+        aluno = (nome, id, notas)
+        turma.append(aluno)
     f.close()
     return turma
 
@@ -91,7 +88,7 @@ while op != '0':
         guardar_turma(turma, ficheiro)
     elif op == '6':
         ficheiro = input("Introduza o nome do ficheiro para carregar a turma.")
-        carregar_turma(ficheiro)
+        print(carregar_turma(ficheiro))
     else:
         print(f"Opção não encontrada: {op}")
     menu()
