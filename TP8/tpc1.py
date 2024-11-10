@@ -1,4 +1,4 @@
-a) Lista formada pelos elementos que não são comuns às duas listas:
+# a) Lista formada pelos elementos que não são comuns às duas listas:
 
 lista1 = [1, 2, 3, 4, 5]
 lista2 = [4, 5, 6, 7, 8]  
@@ -13,7 +13,7 @@ for x in lista2:
 
 print(ncomuns)
 
- b) Lista formada pelas palavras do texto compostas por mais de 3 letras:
+# b) Lista formada pelas palavras do texto compostas por mais de 3 letras:
 
 texto = """Vivia há já não poucos anos algures num concelho do Ribatejo 
     um pequeno lavrador e negociante de gado chamado Manuel Peres Vigário"""
@@ -27,7 +27,7 @@ for palavra in palavras:
 
 print(lista)
 
-c) Lista formada por pares do tipo (índice, valor) com os valores da lista dada:
+# c) Lista formada por pares do tipo (índice, valor) com os valores da lista dada:
 
 lista = ['anaconda', 'burro', 'cavalo', 'macaco']
 
