@@ -20,7 +20,7 @@ def criar_tabMeteo():
     tabMeteo = []
     return tabMeteo
 
-def inserir_dados(tabMeteo): # corrigir, não está a inserir dados novos!!!
+def inserir_dados(tabMeteo):
     ano = int(input("Ano:"))
     mês = int(input("Mês:"))
     dia = int(input("Dia:"))
@@ -73,7 +73,7 @@ def minMin(tabMeteo):
 def amplTerm(tabMeteo):
     res = []
     for data,tmin,tmax,precip in tabMeteo:
-        res.append((data,tmax-tmin)) # PARÊNTISES!!!!!
+        res.append((data,tmax-tmin))
     return res 
 
 def maxChuva(tabMeteo):
@@ -114,21 +114,21 @@ def grafTabMeteo(t): # ainda nao foi feito!!
     
     return
 
+tabMeteo = criar_tabMeteo()
 menu()
 op = input("Introduza uma opção.")
 while op != '0':
     if op == '1':
-        tabMeteo = criar_tabMeteo()
         inserir_dados(tabMeteo)
     elif op == '2':
         listar_tab(tabMeteo)
     elif op == '3':
         print(medias(tabMeteo))
     elif op == '4':
-        ficheiro = input("Introduza o nome do ficheiro para guardar.")
+        ficheiro = input("Introduza o nome do ficheiro para guardar a tabela.")
         guardaTabMeteo(tabMeteo, ficheiro)
     elif op == '5':
-        ficheiro = input("Introduza o nome do ficheiro para carregar a turma.")
+        ficheiro = input("Introduza o nome do ficheiro para carregar a tabela.")
         print(carregaTabMeteo(ficheiro)) 
     elif op == '6':
         print(minMin(tabMeteo))
