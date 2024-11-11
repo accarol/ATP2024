@@ -110,7 +110,9 @@ def maxPeriodoCalor(tabMeteo, p):
         consecutivos = contador
     return consecutivos
 
-def grafTabMeteo(t): # ainda nao foi feito!!
+import matplotlib.pyplot as plt
+
+def grafTabMeteo(t): # acabar!!
     
     return
 
