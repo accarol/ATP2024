@@ -44,9 +44,19 @@ print(produtoM3([12,3,7,10,12,8,9]))
 
 # c) Especifique uma função que dado um número inteiro positivo, repetidamente adiciona os seus dígitos até obter apenas um dígito que é retornado como resultado:
 
+def reduxInt(n):
+    while n >= 10:
+        sn = str(n)
+        soma = 0
+        for d in sn:
+            soma = soma + int(d)
+        n = soma
+    soma = n  # para sair só n, se menor que 10
+    return soma
 
+print(reduxInt(38))
+print(reduxInt(777))
+print(reduxInt(5)) # dá erro, então sair só n
 
 # d) Especifique uma função que recebe duas strings, `string1` e `string2`, e devolve o índice da primeira ocorrência de `string2` em `string1`, caso não ocorra nenhuma vez a função deverá retornar `-1`:
-
-
 
