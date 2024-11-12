@@ -60,3 +60,14 @@ print(reduxInt(5)) # dá erro, então sair só n
 
 # d) Especifique uma função que recebe duas strings, `string1` e `string2`, e devolve o índice da primeira ocorrência de `string2` em `string1`, caso não ocorra nenhuma vez a função deverá retornar `-1`:
 
+def myIndexOf(s1, s2):
+    res = -1
+    i = 0
+    while i < len(s1):
+        if s1[i:i+len(s2)] == s2:
+            res = i
+        i = i + 1
+    return res
+
+print(myIndexOf("Hoje está um belo dia de sol!", "belo"))
+print(myIndexOf("Hoje está um belo dia de sol!", "chuva"))
