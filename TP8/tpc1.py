@@ -31,10 +31,10 @@ print(lista)
 
 lista = ['anaconda', 'burro', 'cavalo', 'macaco']
 
-listaRes = []
+res = []
 i = 1
 for valor in lista:
-    listaRes.append((i,valor))
+    res.append((i,valor))
     i = i + 1
 
-print(listaRes)
+print(res)
