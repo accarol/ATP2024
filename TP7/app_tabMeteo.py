@@ -113,8 +113,41 @@ def maxPeriodoCalor(tabMeteo, p):
 import matplotlib.pyplot as plt
 
 def grafTabMeteo(t): # acabar!!
+    datas = []
+    temp_min = []
+    temp_max = []
+    precipitacao = []
+
+    for dia in tabMeteo:
+        data, tmin, tmax, precip = dia
+        ano, mês, dia = data
+        datas.append(f"{ano}-{mês}-{dia}")
+        temp_min.append(tmin)
+        temp_max.append(tmax)
+        precipitacao.append(precip)
+
+    plt.figure(figsize=(10, 8))  
     
-    return
+    plt.subplot(3, 1, 1)
+    plt.plot(datas, temp_min, color='blue', label="Temp Min")
+    plt.ylabel("Temp Min (°C)")
+    plt.title("Temperatura Mínima")
+    plt.grid()
+
+    plt.subplot(3, 1, 2)
+    plt.plot(datas, temp_max, color='red', label="Temp Max")
+    plt.ylabel("Temp Max (°C)")
+    plt.title("Temperatura Máxima")
+    plt.grid()
+
+    plt.subplot(3, 1, 3)
+    plt.bar(datas, precipitacao, color='purple', label="Precipitação")
+    plt.ylabel("Precipitação (mm)")
+    plt.title("Precipitação")
+    plt.grid()
+
+    plt.tight_layout()
+    plt.show()
 
 tabMeteo = criar_tabMeteo()
 menu()
