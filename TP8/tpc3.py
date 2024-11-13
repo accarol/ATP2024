@@ -1,7 +1,7 @@
 # a) `quantosPost`, que indica quantos posts estão registados:
 
 def quantosPost(redeSocial):
-    return print(len(redeSocial))
+    return len(redeSocial)
 
 # b) `postsAutor`, que devolve a lista de posts de um determinado autor:
 
@@ -16,7 +16,13 @@ def postsAutor(redeSocial, autor):
 
 # c) `autores`, que devolve a lista de autores de posts ordenada alfabeticamente:
 
-
+def autores(redeSocial):
+    lista_autores = []
+    for post in redeSocial:
+        if post["autor"] not in lista_autores:
+            lista_autores.append(post["autor"])
+    lista_autores.sort() # ns se posso usar sort
+    return lista_autores
 
 # d) `insPost`, que acrescenta um novo post à rede social a partir dos parâmetros recebidos e devolve a nova rede social. 
 
