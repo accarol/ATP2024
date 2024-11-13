@@ -1,15 +1,18 @@
-#sendo:
-# post = {id: a, conteúdo: b, datacriação: c, comentários: d}
-# comentários = [{comentário: e, autor: f}, ...]
-
 # a) `quantosPost`, que indica quantos posts estão registados:
 
 def quantosPost(redeSocial):
-    return len(post)
+    return print(len(redeSocial))
 
 # b) `postsAutor`, que devolve a lista de posts de um determinado autor:
 
-
+def postsAutor(redeSocial, autor):
+    posts_autor = []
+    for post in redeSocial:
+        if autor == post["autor"]:
+            posts_autor.append(post)
+    if posts_autor == []:
+        return None
+    return posts_autor
 
 # c) `autores`, que devolve a lista de autores de posts ordenada alfabeticamente:
 
