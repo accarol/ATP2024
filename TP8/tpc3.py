@@ -1,3 +1,7 @@
+#sendo:
+# post = {id: a, conteúdo: b, datacriação: c, comentários: d}
+# comentários = [{comentário: e, autor: f}, ...]
+
 # a) `quantosPost`, que indica quantos posts estão registados:
 
 def quantosPost(redeSocial):
