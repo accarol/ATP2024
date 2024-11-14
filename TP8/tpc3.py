@@ -21,7 +21,7 @@ def autores(redeSocial):
     for post in redeSocial:
         if post["autor"] not in lista_autores:
             lista_autores.append(post["autor"])
-    lista_autores.sort() # ns se posso usar sort
+    lista_autores.sort()
     return lista_autores
 
 # d) `insPost`, que acrescenta um novo post à rede social a partir dos parâmetros recebidos e devolve a nova rede social. 
