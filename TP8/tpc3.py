@@ -26,7 +26,12 @@ def autores(redeSocial):
 
 # d) `insPost`, que acrescenta um novo post à rede social a partir dos parâmetros recebidos e devolve a nova rede social. 
 
-
+def insPost(redeSocial, conteudo, autor, dataCriacao, comentarios):
+    for post in redeSocial:
+        nid = int(post["id"][1:])
+    npost = {"id":f"p{nid+1}", "conteúdo": conteudo, "autor": autor, "dataCriação": dataCriacao, "comentários": comentarios}
+    redeSocial.append(npost)
+    return redeSocial
 
 # e) `remPost`, que remove um post da rede, correspondente ao `id` recebido.
 
