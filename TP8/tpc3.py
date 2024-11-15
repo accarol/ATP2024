@@ -35,11 +35,32 @@ def insPost(redeSocial, conteudo, autor, dataCriacao, comentarios):
 
 # e) `remPost`, que remove um post da rede, correspondente ao `id` recebido.
 
-
+def remPost(redeSocial, id):
+    encontrado = False
+    i = 0
+    while not encontrado and i < len(redeSocial):
+        if redeSocial[i]["id"] == id:
+            encontrado = True
+            del redeSocial[i]
+        i = i + 1
 
 # f) `postsPorAutor`, que devolve uma distribuição de posts por autor (à semelhança do que foi feito nas aulas).
 
-
+def postsPorAutor(redeSocial):
+    distrib = {}
+    for post in redeSocial:
+        if post["autor"] not in distrib:
+            distrib[post["autor"]] = 1
+        else:
+            distrib[post["autor"]] = distrib[post["autor"]] + 1
+    return distrib
 
 # g) `comentadoPor`, que recebe um autor e devolve a lista de posts comentados por esse autor.
 
+def comentadoPor(redeSocial, autor):
+    posts_com = []
+    for post in redeSocial:
+        for comentario in post["comentários"]:
+            if autor == comentario["autor"]:
+                posts_com.append(post)
+    return posts_com
