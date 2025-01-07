@@ -168,9 +168,9 @@ def listar_autores(mybd):
                 publicacoes_autores[nome_autor].append(titulo)
     resultados = []
     for autor in sorted (publicacoes_autores.keys (), key=lambda nome: len (publicacoes_autores [nome]), reverse = True) :
-        resultados.append (f"Autor: (autor) ({len(publicacoes_autores[autor])} artigo(s))")
-    for titulo in publicacoes_autores[autor]:
-        resultados.append(f"  Publicação: {titulo}")
+        resultados.append (f"Autor: {autor} ({len(publicacoes_autores[autor])} artigo(s))")
+        for titulo in publicacoes_autores[autor]:
+            resultados.append(f"  Publicação: {titulo}")
         resultados.append("")
     return resultados
 
